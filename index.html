@@ -211,27 +211,6 @@
 
 			}
 
-			function updateColors( colorAttribute ) {
-
-				const l = colorAttribute.count;
-
-				for ( let i = 0; i < l; i ++ ) {
-
-					const h = ( ( offset + i ) % l ) / l;
-
-					color.setHSL( h, 1, 0.5 );
-					colorAttribute.setX( i, color.r );
-					colorAttribute.setY( i, color.g );
-					colorAttribute.setZ( i, color.b );
-
-				}
-
-				colorAttribute.needsUpdate = true;
-
-				offset -= 25;
-
-			}
-
 		</script>
 	</body>
 </html>
